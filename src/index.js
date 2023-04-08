@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Introduction from './Authentification/Introduction';
+import Connexion from './Authentification/Connexion';
+import Inscription from './Authentification/Inscription';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Inscription/>
   </React.StrictMode>
 );
 
