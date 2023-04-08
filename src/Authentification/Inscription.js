@@ -19,11 +19,11 @@ export default function Inscription() {
     `
 
     return (
-        <div className="d-flex" style={{height : '100vh'}}>
+        <div className="d-flex" style={{height : '100vh' , maxHeight:'100vh'}}>
             <Introduction />
             {/* Connexion */}
             <div className="h-100 w-50 container " style={{marginRight: '0',  padding: 0 , paddingTop : '0vh' }}>
-                <h1 className="fw-bold" style={{margin:'5%'}}>Sign Up to CPCode</h1>
+                <h1 className="fw-bold" style={{marginLeft:'5%',marginTop:'3%',marginBottom:'2%'}}>Sign Up to CPCode</h1>
                 <form className="mx-5">
                     <label className="fs-4 mb-2 ms-0">Name</label>
                     <div className="border rounded-3 w-75 px-5 d-flex justify-content-between  ms-1" style={{ height: '7vh'}}>
