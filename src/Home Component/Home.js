@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import NavHome from "./navHome";
+import logo from './assets/logo.png'
 
 function Home() {
 const Button = styled.button`
@@ -48,9 +50,9 @@ const Button = styled.button`
 `
     return (
         <div>
-            
+            <NavHome/>
             <div>
-                <img src="image/logo.png" style={{height:"150px", marginLeft:"425px", marginTop:"60px" }}/>
+                <img src={logo} style={{height:"150px", marginLeft:"425px", marginTop:"60px" }}/>
                 <p style={{textAlign:"center",fontFamily:"Lucida Console, Courier New, monospace", textIndent:"50px", lineHeight:"1.8"}}>
                 Is a set of reusable, ready-to-use components for building websites. It's designed to help<br></br> developers save time and improve efficiency by providing the building blocks for <br></br>building user interfaces.
                 </p>
