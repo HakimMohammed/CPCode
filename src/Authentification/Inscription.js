@@ -19,15 +19,15 @@ export default function Inscription() {
     `
 
     return (
-        <div className="d-flex">
+        <div className="d-flex" style={{height : '100vh'}}>
             <Introduction />
             {/* Connexion */}
-            <div className="w-50 container " style={{ height: '100vh', marginRight: '0',  padding: 0 , paddingTop : '0vh' }}>
-                <h1 className="m-5 fw-bold">Sign Up to CPCode</h1>
+            <div className="h-100 w-50 container " style={{marginRight: '0',  padding: 0 , paddingTop : '0vh' }}>
+                <h1 className="fw-bold" style={{margin:'5%'}}>Sign Up to CPCode</h1>
                 <form className="mx-5">
                     <label className="fs-4 mb-2 ms-0">Name</label>
                     <div className="border rounded-3 w-75 px-5 d-flex justify-content-between  ms-1" style={{ height: '7vh'}}>
-                        <Field type="email" style={{marginTop : '2vh'}} className="fs-5 w-75 h-50 " placeholder="Enter your email" />
+                        <Field type="email" style={{marginTop : '2vh'}} className="fs-5 w-75 h-50 " placeholder="Enter your name" />
                         <span className=""><img src={User} style={{marginTop : '3vh'}}/></span>
                     </div>
                     <label className="fs-4 mb-2 ms-0">Email</label>
