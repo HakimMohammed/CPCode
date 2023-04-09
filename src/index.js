@@ -11,7 +11,7 @@ import Inscription from './Authentification/Inscription';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Connexion/>
+    <Inscription/>
   </React.StrictMode>
 );
 
