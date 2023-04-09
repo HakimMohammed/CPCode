@@ -5,8 +5,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 50%;
-  height: 100vh;
-  max-height: 100vh;
+  height: 100%;
+  max-height: 100%;
   margin-left: 0;
   padding: 0;
   @media (max-width: 768px) {
