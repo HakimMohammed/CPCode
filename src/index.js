@@ -5,13 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Introduction from './Authentification/Introduction';
 import Connexion from './Authentification/Connexion';
-import Inscription from './Authentification/Inscription';
 import Home from './Home Component/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home/>
+    <Connexion/>
   </React.StrictMode>
 );
 

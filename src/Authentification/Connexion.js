@@ -1,48 +1,178 @@
-import styled from "styled-components"
-import Introduction from "./Introduction"
-import Mail from "./assets/Mail.svg"
-import Lock from "./assets/Lock.svg"
-import Google from "./assets/Google.svg"
+import styled from "styled-components";
+import Introduction from "./Introduction";
+import Mail from "./assets/Gray Mail.svg";
+import Lock from "./assets/Gray Lock.svg";
+import Google from "./assets/Google.svg";
+import User from "./assets/User.svg";
 
-export default function Connexion() {
+import Introduction2 from "./Introduction";
 
-    const Field = styled.input`
-        background-color: transparent;
-        border: 0px solid;
-        height: 20px;
-        width: 160px;
-        &:focus {
-            outline: none;
-            color: #000000;
-        }
-    `
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  max-height: 100vh;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+`;
 
+const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 0;
+  padding-top: 7%;
+  margin-right: 0;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 10%;
+  }
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+  }
+`;
+
+const Label = styled.label`
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+`;
+
+const FieldContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid #ddd;
+  border-radius: 0.5rem;
+  height: 7vh;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 1rem;
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+`;
+
+const Field = styled.input`
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  width: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 1.5rem;
+  &:focus {
+    outline: none;
+    color: #000000;
+  }
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-left: 1%;
+  padding-right: 1%;
+`;
+
+const Icon = styled.img`
+  height: 3vh;
+`;
+
+const SubmitButton = styled.input`
+  font-size: 1.5rem;
+  color: white;
+  background-color: #022b3a;
+  border: none;
+  border-radius: 0.5rem;
+  height: 8vh;
+  margin-top: 1rem;
+  cursor: pointer;
+`;
+
+const GoogleButton = styled.button`
+  font-size: 1.5rem;
+  color: #5f6368;
+  background-color: #e1e5f2;
+  border: none;
+  border-radius: 0.5rem;
+  height: 8vh;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`;
+
+const GoogleIcon = styled.img`
+  height: 3vh;
+`;
+
+const Title = styled.h1`
+    margin-bottom: 3%;
+`;
+
+const LinkField = styled.div`
+    margin-top: 3%;
+`;
+const Link = styled.p`
+    font-size: 1.5rem;
+`;
+
+const Connexion = () => {
     return (
-        <div className="d-flex">
-            <Introduction />
-            {/* Connexion */}
-            <div className="w-50 container " style={{ height: '100vh', marginRight: '0',  padding: 0 , paddingTop : '15vh' }}>
-                <h1 className="m-5 fw-bold text-center">Sign In to CPCode</h1>
-                <form className="mx-5">
-                    <label className="fs-4 mb-2 ms-0">Email</label>
-                    <div className="border rounded-3 w-75 px-5 d-flex justify-content-between  ms-1" style={{ height: '8vh'}}>
-                        <Field type="email" style={{marginTop : '2vh'}} className="fs-5 w-75 h-50 " placeholder="Enter your email" />
-                        <span className=""><img src={Mail} style={{marginTop : '3vh'}}/></span>
-                    </div>
-                    <label className="fs-4 mb-2 mt-3 ms-0">Password</label>
-                    <div className="border rounded-3 w-75 px-5 d-flex justify-content-between  ms-1" style={{ height: '8vh'}}>
-                        <Field type="password" style={{marginTop : '2vh'}} className="fs-5 w-75 h-50 " placeholder="+6 Characters , 1 Capital letter" />
-                        <span className=""><img className="" src={Lock} style={{marginTop : '3vh'}}/></span>
-                    </div>
-                    <input type="submit" value="Sign in" className="fs-5 text-white mt-4 w-75 rounded-3" style={{ height: '8vh' , backgroundColor : '#022B3A'}} />
-                    <button className="fs-5 text-secondary btn w-75 mt-4 rounded-3" style={{ height: '8vh' , backgroundColor : '#E1E5F2' , outlineColor : '#E1E5F2'}}>
-                        <img src={Google} style={{height : '4vh'}} className="me-5"/>
+        <Container>
+            <Introduction2 />
+            <FormContainer>
+                <Form>
+                    <Title>Sign In to CPCode</Title>
+        
+                    <Label>Email</Label>
+                    <FieldContainer>
+                        <IconContainer>
+                            <Icon src={Mail} alt="Email icon" />
+                        </IconContainer>
+                        <Field type="email" placeholder="Enter your email" />
+                    </FieldContainer>
+
+                    <Label>Password</Label>
+                    <FieldContainer>
+                        <IconContainer>
+                            <Icon src={Lock} alt="Password icon" />
+                        </IconContainer>
+                        <Field type="password" placeholder="Enter your password" />
+                    </FieldContainer>
+                    
+                    <SubmitButton type="submit" value="Sign In" />
+                    <GoogleButton>
+                        <GoogleIcon src={Google} alt="Google icon" />
                         Sign in with Google
-                    </button>
-                    <p className="text-center text-secondary my-4 fs-4 w-75">Don't have any account ?<a href="#">Sign Up</a></p>
-                </form>
-                
-            </div>
-        </div>
-    )
-}
+                    </GoogleButton>
+                </Form>
+                <LinkField>
+                    <Link className="text-center">Don't have an account ? <a href="#">Sign Up</a></Link>
+                    <Link className="text-center">Forgot Password? <a href="#">Reset</a></Link>
+                </LinkField>
+            </FormContainer>
+        </Container>
+    );
+};
+
+export default Connexion;
+
+
+
+
