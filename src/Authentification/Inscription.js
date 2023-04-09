@@ -5,8 +5,6 @@ import Lock from "./assets/Gray Lock.svg";
 import Google from "./assets/Google.svg";
 import User from "./assets/User.svg";
 
-import Introduction2 from "./Introduction";
-
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -133,7 +131,7 @@ const Link = styled.p`
 const Inscription = () => {
     return (
         <Container>
-            <Introduction2 />
+            <Introduction/>
             <FormContainer>
                 <Form>
                     <Title>Sign Up to CPCode</Title>
