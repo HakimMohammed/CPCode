@@ -21,6 +21,7 @@ const TopContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 35%;
+  margin-top: 5%;
   @media (max-width: 768px) {
     height: auto;
   }
@@ -39,6 +40,7 @@ const Logo = styled.img`
 `;
 
 const TextContainer = styled.div`
+  margin-top: 3%;
   text-align: center;
   width: 80%;
   font-size: 1.5rem;
@@ -48,7 +50,8 @@ const BottomContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 65%;
+  margin-top: 5%;
+  height: 70%;
   @media (max-width: 768px) {
     height: auto;
   }

@@ -6,11 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import Introduction from './Authentification/Introduction';
 import Connexion from './Authentification/Connexion';
 import Home from './Home Component/Home';
+import Inscription from './Authentification/Inscription';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Home/>
+    <Connexion/>
   </React.StrictMode>
 );
 
